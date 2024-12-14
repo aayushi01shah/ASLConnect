@@ -27,5 +27,3 @@ This project was submitted to De Anza Hacks, where it won Best Educational Hack 
 
 # Contributors
 Aayushi Shah and Aayush Shah
-# License
-This project is licensed under the MIT License.
