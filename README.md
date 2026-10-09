@@ -27,3 +27,15 @@ This project was submitted to De Anza Hacks, where it won Best Educational Hack 
 
 # Contributors
 Aayushi Shah and Aayush Shah
+
+
+# ASL Letters (A-Y)
+
+The built-in MediaPipe model only knows a handful of generic gestures, so letters use a small classifier trained on your own hand landmarks.
+
+1. Install: `pip install -r requirements.txt`
+2. Record samples: `python collect_data.py`. Press a letter key (A-Y, no J) while making that sign. It records 60 frames per press, so tilt and shift your hand slowly as it records. Do 2-3 bursts per letter, ideally in different lighting and distances. ESC quits.
+3. Train: `python train.py` (prints held-out accuracy, saves `letter_model.joblib`)
+4. Run: `python main.py`. The detected letter shows on screen; "I love you" still works.
+
+J and Z involve motion and aren't supported. Look-alike signs (M/N/S/T/A/E) need more samples to separate.
